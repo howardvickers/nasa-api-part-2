@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+        
+        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <div class="text">
+            <h1 class="titles">Asteroids Coming Our Way - Part II</h1>
+            </br>
+            </br>
+            <p>
+                The below table presents asteroids that have been identified by NASA as <i>"potentially hazardous"</i> between July 23 and July 30, 2017. 
+            </p>
+        </div>
+
+        <div class="table text" id="resultsTable">
+            <table class="table table-hover" id="summaryOfResults">
+                <tbody id="body">
+                    <tr id="table-header">
+                        <th>Asteroid Name</th>
+                        <th>Date</th>
+                        <th>Velocity (Miles per Hour)</th>
+                        <th>Maximum Diameter (Miles)</th>
+                        <th>Miles from Earth</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text">
+            <h2 class="titles">Choose Your Own Dates</h2>
+            <p>You can choose your own dates for the NASA data.  Use the boxes below.</p>
+            <form id="nasa-api-form" method="POST" action="/asteroids" >
+                <table>
+                    <tr>
+                        <td></br><label for="date">Begin Date:</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" id="begin-date" name="begin_date"></td>
+                    </tr>
+                    <tr>
+                        <td></br><label for="date">End Date:</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="date" id="end-date" name="end_date"></td>
+                    </tr> 
+                    <tr>
+                        <td></br></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="submit"></td>
+                    </tr>
+                </table>    
+            </form>
+        </div>
+        <div class="text">
+            <p>Please refer to <a href="http://www.nasa.gov">NASA's website</a> for further information.</p>
+        </div>
+            <script src="/main.js"></script>
+    </body>
+</html>
